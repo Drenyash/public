@@ -1,0 +1,26 @@
+.hall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  padding-bottom: 150px;
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  &__title {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 76px;
+    color: $camed;
+  }
+}

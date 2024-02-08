@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+    cursor: pointer;
+  }
+  
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+  }
+  
+  button {
+    margin-top: 30px;
+  }
+}

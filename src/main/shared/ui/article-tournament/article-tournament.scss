@@ -1,0 +1,50 @@
+.article-tournament {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  &__picture {
+    display: flex;
+    
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: $light-wood;
+  }
+  
+  &__title {
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: $camed;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  &__item {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+    color: $camed;
+    
+    span {
+      font-weight: 400;
+    }
+  }
+}

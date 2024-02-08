@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-width: 375px;
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.1;
+  color: $light-wood;
+}
+
+.main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

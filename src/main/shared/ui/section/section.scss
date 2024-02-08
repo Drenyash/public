@@ -1,0 +1,66 @@
+.section {
+  
+  &--color {
+    &--light {
+      background-color: $light-wood;
+    }
+  }
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &--overflow {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+        display: flex;
+        pointer-events: none;
+        z-index: 0;
+      }
+    }
+    
+    &--pattern {
+      &--lines {
+        background-image: url("assets/images/background-pattern.png"), url("assets/images/background-circles.png");
+        background-size: auto, auto;
+        background-position: center, bottom 160px right -60%;
+      }
+      &--gallery {
+        background-image: url("assets/images/background-pattern-gallery.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &--about {
+        background-image: url("assets/images/background-circles.png"), url("assets/images/background-circles-rotated.png");
+        background-size: 40%, 40%;
+        background-position: left -35% bottom, top 15% right -42%;
+        background-repeat: no-repeat;
+      }
+      &--services {
+        background-image: url("assets/images/background-pattern-services.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    
+    &--intro {
+      position: relative;
+      background-image: url("assets/images/header-bg.jpg");
+    }
+    
+    &--info {
+      background-image: url("assets/images/bg-1.jpg");
+    }
+    
+    &--tournaments {
+      background-image: url("assets/images/bg-2.jpg");
+    }
+  }
+}

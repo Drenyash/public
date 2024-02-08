@@ -1,0 +1,64 @@
+.article-hall {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+  
+  &--direction--rtl {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  
+  &__picture {
+    display: flex;
+    max-width: 696px;
+    flex-shrink: 0;
+    
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    
+    button {
+      margin-top: auto;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 44px;
+    color: $camed;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  &__item,
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+    color: $camed;
+    
+    span {
+      font-weight: 500;
+    }
+  }
+  
+  &__text {
+    margin-bottom: 174px;
+  }
+}

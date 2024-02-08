@@ -1,0 +1,26 @@
+.masters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -133px;
+  margin-bottom: 100px;
+  padding: 60px 176px 66px;
+  background-color: $green;
+  background-image: url("assets/images/background-pattern-masters.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  box-shadow: 0px -3px 5px 0px #4D907817, 0px 12px 13px 0px #4D90782B, 0px 4px 6px 0px #4D90781F, 0px -12px 30px 0px #4D90781F, 0px 54px 55px 0px #4D907840;
+  
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+  }
+}

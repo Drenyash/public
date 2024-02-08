@@ -1,0 +1,25 @@
+.modal {
+  padding: 34px 34px 63px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $dark-green;
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+  }
+  
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 33px;
+    text-align: center;
+  }
+  
+  &__form {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,13 @@
+.tournaments {
+  padding: 100px 0 126px;
+  
+  &__title {
+    margin-bottom: 60px;
+  }
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}

@@ -1,0 +1,22 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+  &__link {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    transition: .2s linear;
+    
+    &:hover {
+      opacity: .7;
+    }
+    
+    svg {
+      display: flex;
+      width: inherit;
+      height: inherit;
+    }
+  }
+}

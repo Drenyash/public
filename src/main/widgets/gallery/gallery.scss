@@ -1,0 +1,36 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 50px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  &__picture {
+    display: flex;
+    width: 280px;
+    min-width: 280px;
+    height: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: .2s linear;
+    
+    &.active {
+      width: 100%;
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

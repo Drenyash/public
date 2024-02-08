@@ -1,0 +1,42 @@
+.article-master {
+  &__picture {
+    position: relative;
+    display: flex;
+    width: 344px;
+    height: 518px;
+    border-radius: 24px;
+    overflow: hidden;
+    &:hover {
+      .article-master__block {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  &__title {
+    margin-bottom: 20px;
+    font-family: $font-accent;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39px;
+  }
+  
+  &__block {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    padding: 10px 10px 16px;
+    background-color: $light-wood;
+    border-radius: 0 0 24px 24px;
+    transition: .2s ease-in-out;
+    transform: translateY(100%);
+  }
+  
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: $camed;
+  }
+}

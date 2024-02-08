@@ -1,0 +1,11 @@
+.page-title {
+  font-family: $font-accent;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 78px;
+  &--align {
+    &--center {
+      text-align: center;
+    }
+  }
+}
