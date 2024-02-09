@@ -1,6 +1,8 @@
 .modal {
+  position: relative;
   padding: 34px 34px 63px;
   border-radius: 10px;
+  max-width: 592px;
   overflow: hidden;
   background-color: $dark-green;
 
@@ -10,6 +12,7 @@
     font-weight: 600;
     line-height: 45px;
     text-align: center;
+    color: $light-wood;
   }
   
   &__text {
@@ -17,9 +20,28 @@
     font-weight: 300;
     line-height: 33px;
     text-align: center;
+    color: $light-wood;
   }
   
   &__form {
     margin-top: 30px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
   }
 }

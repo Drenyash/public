@@ -1,31 +1,67 @@
 <div class="hidden">
-  <div class="modal">
+  <div class="modal" id="modalRent">
     <h2 class="modal__title">Предварительная бронь</h2>
     <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
     <p class="modal__text">Заявка на предварительную бронь не является фактом бронирования.</p>
-    <form action="#" class="modal__form form">
+    <form action="#" class="modal__form form" data-form>
       <p class="form__text">Выберете стол</p>
       <label class="form__item">
-        <input type="radio" class="checkbox" name="CHOOSE_TABLE">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="RUSSIAN" required>
         <span>Русский</span>
       </label>
       <label class="form__item">
-        <input type="radio" class="checkbox" name="CHOOSE_TABLE">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="AMERICAN" required>
         <span>Американский</span>
       </label>
       <label class="form__item">
-        <input type="radio" class="checkbox" name="CHOOSE_TABLE">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="VIP" required>
         <span>VIP - зал</span>
       </label>
       <div class="form__block">
-        <input type="date" class="input" placeholder="22-12-2023">
-        <input type="time" class="input" placeholder="Время начала игры">
+        <input type="date" class="input" placeholder="22-12-2023" name="DATE" required>
+        <input type="time" class="input" placeholder="Время начала игры" name="PLAY_START_TIME" required>
       </div>
       <div class="form__block">
-        <input type="text" class="input" placeholder="Ваше имя">
-        <input type="tel" class="input" placeholder="Ваш телефон">
+        <input type="text" class="input" placeholder="Ваше имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Ваш телефон" name="PHONE" required>
       </div>
       <button class="button button--link button--brown" type="submit">Забронировать стол</button>
     </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal" id="modalTraining">
+    <h2 class="modal__title">Запись на тренировку</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Выберете тренировку</p>
+      <input type="hidden" name="TRAINER" value="0">
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="INDIVIDUAL" required>
+        <span>Индивидуальная</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="PARTY" required>
+        <span>Парная</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="KIDS" required>
+        <span>Групповая для детей</span>
+      </label>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Телефон" name="PHONE" required>
+        <input type="email" class="input" placeholder="Почта" name="EMAIL" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Записаться</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
   </div>
 </div>

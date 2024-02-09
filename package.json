@@ -63,6 +63,9 @@
     "last 3 versions"
   ],
   "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
+    "axios": "^1.6.7",
+    "swiper": "^11.0.6",
     "the-new-css-reset": "^1.11.2"
   }
 }

@@ -48,6 +48,16 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+      &--events {
+        background-image: url("assets/images/background-pattern-events.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &--contacts {
+        background-image: url("assets/images/background-pattern-contacts.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     }
     
     &--intro {

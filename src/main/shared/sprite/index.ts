@@ -1,3 +1,10 @@
 import "./icon-ball.svg";
 import "./icon-vk.svg";
+import "./icon-vk-green.svg";
 import "./icon-arrow.svg";
+import "./icon-arrow-slim.svg";
+import "./icon-diamond.svg";
+import "./icon-whatsapp.svg";
+import "./icon-telegram.svg";
+import "./icon-time.svg";
+import "./icon-close.svg";
