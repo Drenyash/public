@@ -1,0 +1,38 @@
+.air-datepicker-global-container {
+  z-index: 9999;
+}
+
+.air-datepicker {
+  background-color: $light-wood;
+}
+
+.air-datepicker-nav {
+  border: none;
+}
+
+.air-datepicker-nav--title {
+  order: -1;
+  margin-right: auto;
+}
+
+.air-datepicker--pointer:after {
+  background-color: $light-wood;
+}
+
+.air-datepicker-cell.-current- {
+  color: $green;
+}
+
+.air-datepicker-body--day-name {
+  color: $camed;
+}
+
+.air-datepicker-nav--action {
+  svg path {
+    stroke: $green;
+  }
+}
+
+.air-datepicker-cell.-day-.-selected- {
+  background-color: $green;
+}

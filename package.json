@@ -64,7 +64,9 @@
   ],
   "dependencies": {
     "@fancyapps/ui": "^5.0.33",
+    "air-datepicker": "^3.4.0",
     "axios": "^1.6.7",
+    "inputmask": "^5.0.8",
     "swiper": "^11.0.6",
     "the-new-css-reset": "^1.11.2"
   }

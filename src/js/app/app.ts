@@ -3,6 +3,8 @@ import Gallery from "./gallery";
 import FancyboxCustom from "./fancybox";
 import Form from "./form";
 import Tabs from "./tabs";
+import DatePicker from "./datePicker";
+import InputMask from "./inputMask";
 
 class App {
   constructor() {
@@ -15,6 +17,8 @@ class App {
     this.createFancybox()
     this.createForm()
     this.createTabs()
+    this.createDatePicker()
+    this.createInputMask()
   };
   
   createSlider() {
@@ -50,6 +54,14 @@ class App {
   
   createTabs() {
     new Tabs()
+  }
+  
+  createDatePicker() {
+    new DatePicker('#DatePick')
+  }
+  
+  createInputMask() {
+    new InputMask()
   }
 }
 
