@@ -4,6 +4,7 @@
   border-radius: 10px;
   max-width: 592px;
   overflow: hidden;
+  overflow-y: auto;
   background-color: $dark-green;
 
   &__title {
@@ -13,6 +14,16 @@
     line-height: 45px;
     text-align: center;
     color: $light-wood;
+    
+    @include r($desktop) {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    
+    &--main {
+      font-family: $font-main;
+    }
   }
   
   &__text {
@@ -21,6 +32,11 @@
     line-height: 33px;
     text-align: center;
     color: $light-wood;
+    
+    @include r($desktop) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   
   &__form {

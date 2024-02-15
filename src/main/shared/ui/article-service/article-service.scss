@@ -8,6 +8,18 @@
   border-radius: 24px;
   overflow: hidden;
   
+  @include r($desktop) {
+    min-height: 274px;
+  }
+  
+  @include r($mobile) {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  
   &__info {
     display: flex;
     flex-direction: column;
@@ -17,6 +29,22 @@
     gap: 20px;
     width: 832px;
     padding: 30px 32px 30px 72px;
+    
+    @include r($desktop) {
+      gap: 9px;
+      width: 486px;
+      padding: 20px 32px;
+    }
+    
+    @include r($tablet) {
+      padding: 20px;
+      max-width: 358px;
+    }
+    
+    @include r($mobile) {
+      padding: 20px 10px 0;
+      width: auto;
+    }
   }
   
   &__picture {
@@ -26,6 +54,19 @@
     border-radius: 24px;
     overflow: hidden;
     box-shadow: -10px 0px 20px 0px #00000033;
+    
+    @include r($desktop) {
+      width: 427px;
+    }
+    
+    @include r($tablet) {
+      max-width: 304px;
+    }
+    
+    @include r($mobile) {
+      width: 100%;
+      border-radius: 8px;
+    }
 
     img {
       display: block;
@@ -39,6 +80,17 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 49px;
+    
+    @include r($desktop) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
   }
   &__text,
   &__item {
@@ -49,18 +101,37 @@
     -webkit-line-clamp: 3; /* number of lines to show */
     line-clamp: 3;
     -webkit-box-orient: vertical;
+    
+    @include r($desktop) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    
+    @include r($mobile) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+    }
   }
   
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
+    @include r($desktop) {
+      gap: 9px;
+    }
   }
   
   &__item {
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
+    
+    @include r($desktop) {
+      row-gap: 9px;
+    }
     
     b {
       font-weight: 500;

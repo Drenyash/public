@@ -5,6 +5,11 @@
   border-radius: 50px;
   border: 5px solid $light-wood;
   background-color: $light-wood;
+  
+  @include r($desktop) {
+    width: 24px;
+    height: 24px;
+  }
   &:checked {
     border-color: $camed;
   }

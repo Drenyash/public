@@ -4,6 +4,19 @@
   align-items: center;
   gap: 120px;
   padding-bottom: 150px;
+  
+  @include r($desktop) {
+    gap: 100px;
+    padding-bottom: 80px;
+  }
+  
+  @include r($tablet) {
+    gap: 80px;
+  }
+  
+  @include r($mobile) {
+    gap: 50px;
+  }
 
   &__body {
     width: 100%;
@@ -14,6 +27,10 @@
     flex-direction: column;
     gap: 80px;
 
+    @include r($mobile) {
+      gap: 30px;
+    }
+    
     &.active {
       display: flex;
     }
@@ -23,6 +40,14 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+    
+    @include r($desktop) {
+      gap: 40px;
+    }
+    
+    @include r($mobile) {
+      gap: 20px;
+    }
   }
   
   &__title {
@@ -30,5 +55,16 @@
     font-weight: 500;
     line-height: 76px;
     color: $camed;
+    
+    @include r($desktop) {
+      font-size: 36px;
+      line-height: 49px;
+    }
+    
+    @include r($mobile) {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 27px;
+    }
   }
 }

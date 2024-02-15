@@ -1,0 +1,14 @@
+.separator {
+  display: flex;
+  margin: 0 auto;
+  width: 166px;
+  height: 3px;
+  
+  @include rmin($mobile) {
+    display: none;
+  }
+  
+  &--drl {
+    transform: rotate(180deg);
+  }
+}

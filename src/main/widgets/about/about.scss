@@ -4,8 +4,20 @@
   padding-top: 160px;
   padding-bottom: 212px;
   
+  @include r($desktop) {
+    padding-bottom: 100px;
+  }
+  
+  @include r($mobile) {
+    padding-top: 60px;
+  }
+  
   &__head {
     margin-bottom: 60px;
+    
+    @include r($mobile) {
+      margin-bottom: 10px;
+    }
   }
   
   &__info {
@@ -19,6 +31,17 @@
     border-radius: 24px;
     border: 1px solid $copper;
     
+    @include r($desktop) {
+      margin-bottom: 40px;
+    }
+    
+    @include r($mobile) {
+      gap: 20px;
+      border-radius: 8px;
+      max-width: 255px;
+      padding: 23px 16px 49px;
+    }
+    
     &::before {
       position: absolute;
       top: 50%;
@@ -31,6 +54,15 @@
       background-position: center;
       background-size: cover;
       transform: translateY(-50%);
+      @include r($desktop) {
+        left: -45px;
+        height: 292px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      @include r($mobile) {
+        left: -20px;
+      }
     }
     &::after {
       position: absolute;
@@ -44,6 +76,15 @@
       background-position: center;
       background-size: cover;
       transform: translateY(-50%) rotate(180deg);
+      @include r($desktop) {
+        right: -45px;
+        height: 292px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      @include r($mobile) {
+        right: -20px;
+      }
     }
   }
   
@@ -53,20 +94,53 @@
     line-height: 55px;
     color: $camed;
     text-align: center;
+    
+    @include r($desktop) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    
+    @include r($mobile) {
+      margin-bottom: 22px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
   }
   
   &__text {
     font-size: 32px;
     font-weight: 400;
-    line-height: 44px;
+    line-height: 1.2;
     color: $camed;
+    
+    @include r($desktop) {
+      font-size: 21px;
+    }
+    
+    @include r($tablet) {
+      font-size: 16px;
+    }
+    
+    @include r($mobile) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+    }
     
     span {
       display: flex;
       justify-content: flex-end;
       
+      @include r($mobile) {
+        display: inline;
+      }
+      
       &:nth-child(1) {
         padding-right: 40px;
+        @include r($mobile) {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -81,16 +155,37 @@
     background-color: $camed;
     border-radius: 50px;
     
+    @include r($desktop) {
+      width: 32px;
+      height: 32px;
+    }
+    
+    @include r($mobile) {
+      width: 20px;
+      height: 20px;
+      top: 4px;
+      left: 4px;
+    }
+    
     &:last-of-type {
       top: 16px;
       left: 50%;
       transform: translateX(-50%);
+      @include r($mobile) {
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+      }
     }
     
     &:nth-child(3) {
-      top: 16px;
       left: initial;
+      top: 16px;
       right: 16px;
+      @include r($mobile) {
+        top: 4px;
+        right: 4px;
+      }
     }
     
     &:nth-child(4) {
@@ -98,6 +193,10 @@
       left: initial;
       right: 16px;
       bottom: 16px;
+      @include r($mobile) {
+        right: 4px;
+        bottom: 4px;
+      }
     }
     
     &:nth-child(5) {
@@ -105,12 +204,23 @@
       bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
+      
+      @include r($mobile) {
+        top: 50%;
+        left: initial;
+        right: 4px;
+        transform: translateY(-50%);
+      }
     }
     
     &:nth-child(6) {
       top: initial;
       left: 16px;
       bottom: 16px;
+      @include r($mobile) {
+        left: 4px;
+        bottom: 4px;
+      }
     }
   }
   
@@ -121,6 +231,22 @@
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    
+    @include r($desktop) {
+      width: 160px;
+      height: 160px;
+    }
+    
+    @include r($tablet) {
+      width: 140px;
+      height: 140px;
+    }
+    
+    @include r($mobile) {
+      width: 100%;
+      max-width: 168px;
+      border-radius: 8px;
+    }
     
     img {
       display: block;
@@ -137,13 +263,26 @@
     justify-content: flex-end;
     gap: 26px;
     
+    @include r($mobile) {
+      flex-direction: column;
+    }
+    
     .about__text {
       text-align: right;
+      
+      @include r($mobile) {
+        text-align: left;
+      }
     }
     
     &--reverse {
       margin-top: -5%;
       flex-direction: row-reverse;
+      
+      @include r($mobile) {
+        margin-top: 0;
+        flex-direction: column-reverse;
+      }
       
       .about__text {
         text-align: left;

@@ -5,9 +5,26 @@
   padding: 50px 20px 166px;
   background-color: rgba($dark-green, 0.75);
   
+  @include r($desktop) {
+    padding: 50px 10px 74px;
+  }
+  @include r($mobile) {
+    padding: 20px;
+    background-color: transparent;
+  }
+  
   &__picture {
     display: flex;
     margin-bottom: 40px;
+    z-index: 1;
+    
+    @include r($desktop) {
+      width: 298px;
+    }
+    
+    @include r($mobile) {
+      width: 166px;
+    }
   }
   
   &__list {
@@ -19,8 +36,31 @@
   &__item {
     &:nth-child(even) {
       margin-left: 360px;
+      @include r($desktop) {
+        margin-left: 140px;
+      }
     }
     font-size: 40px;
     line-height: 55px;
+    
+    @include r($desktop) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    
+    @include r($mobile) {
+      display: flex;
+      align-items: center;
+      padding: 30px 10px;
+      height: 100%;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      background: linear-gradient(255.69deg, rgba(221, 221, 221, 0.16) 0%, rgba(225, 225, 225, 0.08) 41.31%, rgba(238, 238, 238, 0.04) 72.87%, rgba(232, 226, 216, 0.16) 100%),
+      linear-gradient(255.69deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+      border: 2px solid rgba($light, 0.3);
+      box-shadow: 0 4px 20px -1px #BBBBBB33;
+      border-radius: 8px;
+    }
   }
 }

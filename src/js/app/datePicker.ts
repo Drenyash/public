@@ -5,7 +5,7 @@ class DatePicker {
   picker: HTMLElement | AirDatepicker<HTMLElement>;
   selector;
   
-  constructor(selector: string) {
+  constructor(selector: Element) {
     this.selector = selector;
     
     this.init()
@@ -16,7 +16,7 @@ class DatePicker {
   }
   
   initPicker() {
-    this.picker = new AirDatepicker(this.selector, {
+    this.picker = new AirDatepicker(this.selector as HTMLElement, {
       minDate: Date.now(),
       autoClose: true,
     });

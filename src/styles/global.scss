@@ -3,11 +3,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  min-width: 375px;
+  min-width: 320px;
   font-family: $font-main;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1;
   color: $light-wood;
 }
 
@@ -24,3 +24,27 @@ svg {
   fill: currentColor;
 }
 
+.tabled-hidden {
+  @include r($desktop) {
+    display: none;
+  }
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    display: none;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($desktop) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @include r($mobile) {
+    display: flex;
+  }
+}

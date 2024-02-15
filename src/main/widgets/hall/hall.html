@@ -2,7 +2,7 @@
   <div class="container">
     <div class="hall">
       <div class="features">
-        <h3 class="features__title">Наш зал оснащен:</h3>
+        <h3 class="features__title">Наш зал оснащен</h3>
         <div class="features__wrapper">
           <div class="features__item">
             <picture class="features__picture">
@@ -53,12 +53,23 @@
               </picture>
               <div class="article-hall__info">
                 <h3 class="article-hall__title">Русский бильярд</h3>
-                <ul class="article-hall__list">
+                <p class="article-hall__text">
+                  Максимальный комфорт и приватность для вашей компании.
+                </p>
+                <ul class="article-hall__list mob-hidden">
                   <li class="article-hall__item">с 12:00 до 15:00 - <span>700 ₽/час</span></li>
                   <li class="article-hall__item">с 15:00 до 05:00 - <span>1 100 ₽/час</span></li>
                 </ul>
-                <button class="button button--accent" data-fancybox data-src="#modalRent">Забронировать стол</button>
+                <button class="button button--accent mob-hidden" data-fancybox data-src="#modalRent">Забронировать стол</button>
               </div>
+              <ul class="article-hall__list mobile-only">
+                <li class="article-hall__item">с 12:00 до 15:00 - <span>700 ₽/час</span></li>
+                <li class="article-hall__item">с 15:00 до 05:00 - <span>1 100 ₽/час</span></li>
+              </ul>
+              <button class="button button--accent mobile-only" data-fancybox data-src="#modalRent">Забронировать стол</button>
+              <svg class="separator">
+                <use xlink:href="/assets/sprite/sprite.svg#icon-cue-separator"></use>
+              </svg>
             </div>
             <div class="article-hall article-hall--direction--rtl">
               <picture class="article-hall__picture">
@@ -66,12 +77,23 @@
               </picture>
               <div class="article-hall__info">
                 <h3 class="article-hall__title">Американский пул</h3>
-                <ul class="article-hall__list">
+                <p class="article-hall__text">
+                  Максимальный комфорт и приватность для вашей компании.
+                </p>
+                <ul class="article-hall__list mob-hidden">
                   <li class="article-hall__item">с 12:00 до 15:00 - <span>600 ₽/час</span></li>
                   <li class="article-hall__item">с 15:00 до 05:00 - <span>1 000 ₽/час</span></li>
                 </ul>
-                <button class="button button--accent" data-fancybox data-src="#modalRent">Забронировать стол</button>
+                <button class="button button--accent mob-hidden" data-fancybox data-src="#modalRent">Забронировать стол</button>
               </div>
+              <ul class="article-hall__list mobile-only">
+                <li class="article-hall__item">с 12:00 до 15:00 - <span>600 ₽/час</span></li>
+                <li class="article-hall__item">с 15:00 до 05:00 - <span>1 000 ₽/час</span></li>
+              </ul>
+              <button class="button button--accent mobile-only" data-fancybox data-src="#modalRent">Забронировать стол</button>
+              <svg class="separator separator--drl">
+                <use xlink:href="/assets/sprite/sprite.svg#icon-cue-separator"></use>
+              </svg>
             </div>
           </div>
           <div class="hall__block">
@@ -124,11 +146,11 @@
                 </div>
               </div>
               <div class="article-hall__info">
-                <h3 class="article-hall__title">VIP</h3>
+                <h3 class="article-hall__title mob-hidden">VIP</h3>
                 <p class="article-hall__text">
                   Максимальный комфорт и приватность для вашей компании.
                 </p>
-                <ul class="article-hall__list">
+                <ul class="article-hall__list mob-hidden">
                   <li class="article-hall__item">
                     Вместимость - <span>до 16 человек</span>
                   </li>
@@ -136,8 +158,17 @@
                     Стоимость - <span>4000 ₽/час</span>
                   </li>
                 </ul>
-                <button class="button button--accent" data-fancybox data-src="#modalRent">Забронировать стол</button>
+                <button class="button button--accent mob-hidden" data-fancybox data-src="#modalRent">Забронировать стол</button>
               </div>
+              <ul class="article-hall__list mobile-only">
+                <li class="article-hall__item">
+                  Вместимость - <span>до 16 человек</span>
+                </li>
+                <li class="article-hall__item">
+                  Стоимость - <span>4000 ₽/час</span>
+                </li>
+              </ul>
+              <button class="button button--accent mobile-only" data-fancybox data-src="#modalRent">Забронировать стол</button>
             </div>
           </div>
         </div>

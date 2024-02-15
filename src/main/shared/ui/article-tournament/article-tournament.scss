@@ -7,6 +7,10 @@
   &__picture {
     display: flex;
     
+    @include r($desktop) {
+      height: 176px;
+    }
+    
     img {
       display: block;
       width: 100%;
@@ -22,6 +26,9 @@
     gap: 20px;
     padding: 20px;
     background-color: $light-wood;
+    @include r($desktop) {
+      gap: 16px;
+    }
   }
   
   &__title {
@@ -29,6 +36,11 @@
     line-height: 43px;
     text-align: center;
     color: $camed;
+  
+    @include r($desktop) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
   
   &__list {
@@ -36,6 +48,14 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    
+    @include r($desktop) {
+      gap: 16px;
+    }
+    
+    @include r($tablet) {
+      gap: 14px;
+    }
   }
   
   &__item {
@@ -43,6 +63,20 @@
     font-weight: 300;
     line-height: 33px;
     color: $camed;
+    
+    @include r($desktop) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    
+    @include r($tablet) {
+      text-align: center;
+    }
+    
+    @include r($mobile) {
+      display: flex;
+      flex-direction: column;
+    }
     
     span {
       font-weight: 400;

@@ -3,6 +3,10 @@
   font-size: 56px;
   font-weight: 600;
   line-height: 78px;
+  @include r($desktop) {
+    font-size: 32px;
+    line-height: 44px;
+  }
   &--align {
     &--center {
       text-align: center;

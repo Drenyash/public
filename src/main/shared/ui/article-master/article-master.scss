@@ -1,11 +1,37 @@
 .article-master {
-
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  
+  @include r($desktop) {
+    width: 100%;
+  }
+  
+  @include r($mobile) {
+    padding: 20px 0;
+    align-items: center;
+    background-color: $light-wood;
+    border-radius: 8px;
+    gap: 20px;
+  }
+  
   &--detail {
     padding: 30px 72px 50px;
     box-shadow: 0 4px 20px -1px #BBBBBB33;
     background-color: rgba($light, 0.3);
     border-radius: 24px;
-
+    
+    @include r($desktop) {
+      padding: 20px 72px;
+    }
+    
+    @include r($mobile) {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    
     .article-master__block {
       position: static;
       flex-direction: column;
@@ -16,34 +42,88 @@
       background-color: transparent;
       border-radius: 0;
       transform: none;
+      
+      @include r($mobile) {
+        padding: 20px 10px 0;
+        align-items: center;
+      }
     }
-
+    
     .article-master__title {
       font-family: $font-main;
       font-size: 28px;
       font-weight: 500;
       line-height: 38px;
+      
+      @include r($desktop) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      
+      @include r($mobile) {
+        align-self: flex-start;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+      }
     }
-
+    
     .article-master__info {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 72px;
+      
+      @include r($desktop) {
+        gap: 32px;
+      }
+      
+      @include r($mobile) {
+        gap: 0;
+        flex-direction: column;
+        box-shadow: 0 1.551786184310913px 7.758931636810303px -0.38794654607772827px #00000033;
+        padding-bottom: 20px;
+      }
     }
-
+    
     .article-master__text {
       font-size: 24px;
       font-weight: 400;
       line-height: 32px;
+      
+      @include r($desktop) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+      }
     }
-
+    
     .article-master__picture {
       max-height: 368px;
       max-width: 240px;
+      
+      @include r($desktop) {
+        max-width: 136px;
+        max-height: 210px;
+      }
+      @include r($mobile) {
+        max-width: 100%;
+        width: 100%;
+        max-height: 300px;
+      }
+      
+      img {
+        @include r($mobile) {
+          max-width: 100%;
+          height: 300px;
+          width: 100%;
+          max-height: 300px;
+        }
+      }
     }
   }
-
+  
   &__picture {
     position: relative;
     display: flex;
@@ -52,22 +132,65 @@
     flex-shrink: 0;
     border-radius: 24px;
     overflow: hidden;
-
+    
+    @include r($desktop) {
+      flex-direction: column;
+      width: auto;
+      height: auto;
+    }
+    
+    @include r($mobile) {
+      gap: 20px;
+      border-radius: 8px;
+      align-items: center;
+    }
+    
     &:hover {
       .article-master__block {
         transform: translateY(0);
       }
     }
+    
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      @include r($desktop) {
+        width: 280px;
+        height: 300px;
+      }
+      @include r($mobile) {
+        max-width: 118px;
+        max-height: 182px;
+      }
+    }
   }
-
+  
   &__title {
     margin-bottom: 20px;
     font-family: $font-accent;
     font-size: 28px;
     font-weight: 600;
     line-height: 39px;
+    
+    @include r($desktop) {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+    }
+    
+    @include r($tablet) {
+      font-size: 16px;
+    }
+    
+    @include r($mobile) {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $camed;
+    }
   }
-
+  
   &__block {
     position: absolute;
     left: 0;
@@ -78,14 +201,33 @@
     border-radius: 0 0 24px 24px;
     transition: .2s ease-in-out;
     transform: translateY(100%);
+    
+    @include r($desktop) {
+      position: static;
+      height: 100%;
+      transform: none;
+    }
+    
+    @include r($mobile) {
+      padding: 0;
+    }
   }
-
+  
   &__text {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
     color: $camed;
-
+    
+    @include r($desktop) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    
+    @include r($mobile) {
+      text-align: center;
+    }
+    
     b {
       font-weight: 500;
     }

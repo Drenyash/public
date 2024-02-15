@@ -9,11 +9,20 @@
   border-radius: 8px;
   transition: .2s linear;
   cursor: pointer;
+  
+  @include r($desktop) {
+    padding: 8px;
+    font-size: 14px;
+    line-height: 19px;
+  }
 
   &--circle {
     padding: 18px 20px;
     border: 1px solid $light-wood;
     border-radius: 32px;
+    @include r($desktop) {
+      padding: 8px;
+    }
   }
   
   &--link {
@@ -39,7 +48,7 @@
   
   &--brown {
     background-color: $copper;
-    color: $camed;
+    color: $light-wood;
   }
   
   &--animate {
@@ -52,11 +61,14 @@
     &--balls {
       &:hover {
         padding-right: 60px;
+        @include r($desktop) {
+          padding-right: 35px;
+        }
         &::before {
           animation: ballMove .5s ease-in-out;
         }
         &::after {
-          right: 0;
+          right: 4px;
         }
       }
       &::before {
@@ -71,6 +83,11 @@
         background-color: $light-wood;
         transform: translateY(-50%);
         z-index: 1;
+        
+        @include r($desktop) {
+          width: 26px;
+          height: 26px;
+        }
       }
       &::after {
         content: '';
@@ -85,6 +102,11 @@
         transform: translateY(-50%);
         z-index: 0;
         transition: .2s linear;
+        
+        @include r($desktop) {
+          width: 26px;
+          height: 26px;
+        }
       }
     }
   }
@@ -94,6 +116,10 @@
     border-radius: 4px;
     background-color: $camed;
     color: $light-wood;
+    
+    @include r($desktop) {
+      padding: 8px;
+    }
   }
 }
 

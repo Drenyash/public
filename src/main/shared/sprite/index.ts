@@ -8,3 +8,4 @@ import "./icon-whatsapp.svg";
 import "./icon-telegram.svg";
 import "./icon-time.svg";
 import "./icon-close.svg";
+import "./icon-cue-separator.svg";

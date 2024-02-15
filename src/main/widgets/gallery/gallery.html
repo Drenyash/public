@@ -3,20 +3,29 @@
     <div class="gallery">
       <h2 class="gallery__title title title--color--dark">
         Галерея
-        <svg class="title__icon">
-          <use href="assets/sprite/sprite.svg#icon-arrow"></use>
-        </svg>
       </h2>
       <div class="gallery__wrapper" data-gallery>
-        <picture class="gallery__picture active" data-gallery-item>
-          <img src="assets/images/gallery-1.png" alt="">
-        </picture>
-        <picture class="gallery__picture" data-gallery-item>
-          <img src="assets/images/gallery-2.png" alt="">
-        </picture>
-        <picture class="gallery__picture" data-gallery-item>
-          <img src="assets/images/gallery-3.png" alt="">
-        </picture>
+        <div class="slider slider--gallery" data-slider="custom">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide active">
+                <picture class="gallery__picture active" data-gallery-item>
+                  <img src="assets/images/gallery-1.png" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="gallery__picture" data-gallery-item>
+                  <img src="assets/images/gallery-2.png" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="gallery__picture" data-gallery-item>
+                  <img src="assets/images/gallery-3.png" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

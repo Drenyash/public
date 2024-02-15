@@ -1,0 +1,13 @@
+@use "sass:math";
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content
+  }
+}

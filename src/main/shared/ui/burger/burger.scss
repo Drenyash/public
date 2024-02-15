@@ -1,0 +1,54 @@
+.burger {
+  position: relative;
+  display: flex;
+  width: 18px;
+  height: 12px;
+  overflow: hidden;
+  
+  @include rmin($mobile) {
+    display: none;
+  }
+  
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    display: flex;
+    width: 18px;
+    height: 2px;
+    background-color: $light-wood;
+    transition: .2s linear;
+  }
+  
+  &::before {
+    top: 0;
+  }
+  
+  &::after {
+    top: 10px;
+  }
+  
+  &.active {
+    .burger__item {
+      top: -4px;
+      opacity: 0;
+    }
+    &::before {
+      transform: translateY(5px) rotate(-45deg);
+    }
+    
+    &::after {
+      transform: translateY(-5px) rotate(45deg);
+    }
+  }
+  
+  &__item {
+    position: absolute;
+    top: 5px;
+    display: flex;
+    width: 18px;
+    height: 2px;
+    background-color: $light-wood;
+    transition: .2s linear;
+  }
+}

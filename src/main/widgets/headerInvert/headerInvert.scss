@@ -1,5 +1,15 @@
 .header--invert {
-  nav {
+  .nav {
     color: $camed;
+  }
+  .burger {
+    &::before,
+    &::after,
+    &__item {
+      background-color: $camed;
+    }
+  }
+  .mobile-menu {
+    background-color: $light-wood;
   }
 }

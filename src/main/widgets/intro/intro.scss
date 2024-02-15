@@ -5,27 +5,60 @@
   max-height: 1038px;
   z-index: 1;
   
+  @include r($desktop) {
+    padding-top: 80px;
+  }
+  
+  @include r($mobile) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  
   &__content {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 56px;
+    
+    @include r($desktop) {
+      padding-top: 40px;
+    }
+    @include r($mobile) {
+      margin-bottom: 0;
+    }
   }
   
   &__picture {
     margin-bottom: 50px;
+    
+    @include r($desktop) {
+      width: 299px;
+    }
+    
+    @include r($mobile) {
+      width: 168px;
+    }
   }
   
   &__link {
     position: absolute;
     top: 0;
     right: 0;
+    
+    @include r($mobile) {
+      top: initial;
+      bottom: 0;
+    }
   }
   
   &__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    @include r($mobile) {
+      display: none;
+    }
   }
 }

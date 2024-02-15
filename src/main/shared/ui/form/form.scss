@@ -3,6 +3,10 @@
   flex-direction: column;
   gap: 20px;
   
+  @include r($desktop) {
+    gap: 10px;
+  }
+  
   &__block {
     display: flex;
     flex-direction: column;
@@ -18,6 +22,11 @@
     line-height: 33px;
     color: $light-wood;
     cursor: pointer;
+    
+    @include r($desktop) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
   
   &__text {
@@ -25,6 +34,11 @@
     font-weight: 300;
     line-height: 33px;
     color: $light-wood;
+    
+    @include r($desktop) {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
   
   button {

@@ -9,6 +9,11 @@
     height: 48px;
     transition: .2s linear;
     
+    @include r($desktop) {
+      width: 32px;
+      height: 32px;
+    }
+    
     &:hover {
       opacity: .7;
     }

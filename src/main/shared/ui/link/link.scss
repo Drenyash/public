@@ -5,6 +5,11 @@
   text-decoration: underline;
   transition: .2s linear;
   
+  @include r($desktop) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
   &:hover {
     text-decoration: none;
   }

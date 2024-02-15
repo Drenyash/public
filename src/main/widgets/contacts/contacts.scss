@@ -5,17 +5,39 @@
   gap: 53px;
   padding-top: 160px;
   padding-bottom: 190px;
+  
+  @include r($desktop) {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
+  
+  @include r($mobile) {
+    padding-top: 60px;
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 474px 1fr;
     gap: 32px;
     width: 100%;
+    
+    @include r($desktop) {
+      display: flex;
+      flex-direction: column
+    }
   }
 
   &__map {
     display: flex;
     width: 100%;
+    
+    @include r($desktop) {
+      height: 400px;
+    }
+    
+    @include r($mobile) {
+      height: 130px;
+    }
 
     iframe {
       display: flex;
@@ -30,12 +52,32 @@
     flex-direction: column;
     gap: 30px;
     color: $camed;
+    @include r($desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    @include r($mobile) {
+      gap: 20px;
+    }
   }
 
   &__address {
     font-size: 32px;
     font-weight: 500;
     line-height: 44px;
+    
+    @include r($desktop) {
+      width: 100%;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    
+    @include r($mobile) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__text,
@@ -43,6 +85,16 @@
     font-size: 32px;
     font-weight: 300;
     line-height: 44px;
+    
+    @include r($desktop) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    
+    @include r($mobile) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__item {
@@ -54,6 +106,11 @@
       display: flex;
       width: 32px;
       height: 32px;
+      
+      @include r($mobile) {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 
@@ -61,12 +118,32 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    
+    @include r($desktop) {
+      gap: 0;
+      justify-content: space-between;
+    }
+    
+    @include r($mobile) {
+      gap: 10px;
+    }
   }
 
   &__link {
     font-size: 32px;
     font-weight: 500;
     line-height: 44px;
+    
+    @include r($desktop) {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    
+    @include r($mobile) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
   }
 
   &__socials {
@@ -80,5 +157,15 @@
     display: flex;
     width: 60px;
     height: 60px;
+    
+    @include r($desktop) {
+      width: 40px;
+      height: 40px;
+    }
+    
+    @include r($mobile) {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

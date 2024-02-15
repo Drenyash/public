@@ -1,6 +1,372 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><title>Title</title><link href="css/main.bdef.css" rel="stylesheet"></head><body><header class="header header--invert"><div class="container"><div class="header__wrapper"><nav class="nav"><a class="nav__item" href="/"><img src="assets/images/logo-dark.svg" alt=""> </a><a class="nav__item" href="/about.html">О клубе</a> <a class="nav__item" href="/services.html">Услуги и цены</a> <a class="nav__item" href="">Ресторан</a> <a class="nav__item" href="/events.html">Мероприятия</a> <a class="nav__item" href="/academy.html">Обучение</a> <a class="nav__item" href="/contacts.html">Контакты</a></nav></div></div></header><main class="main"><section class="section section--color--light section--bg--pattern--about"><div class="container"><div class="academy"><div class="academy__header"><h1 class="title title--color--dark">Уральская академия бильярда</h1><p class="academy__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p><p class="academy__text">Ваш персональный тренер</p></div><div class="slider slider--masters" data-slider><div class="swiper"><div class="swiper-wrapper"><div class="swiper-slide"><article class="article-master article-master--detail"><h3 class="article-master__title">Юлия Устюжанина</h3><div class="article-master__info"><div class="article-master__picture"><img src="assets/images/trener-1.png" alt=""></div><div class="article-master__block"><p class="article-master__text">Кандидат в мастера спорта. Призёр чемпионата России, многократная чемпионка Свердловской и Челябинской областей. Владеет ударами: абриколь, дуплет, массе, француз.<br><br>Более 8 лет в бильярдном спорте.<br>Стаж преподавания 2 года.<br><br>Стоимость занятия - <b>1000 ₽/час</b></p><button class="button button--small" data-fancybox="Julia" data-src="#modalTraining">Подробнее</button></div></div></article></div><div class="swiper-slide"><article class="article-master article-master--detail"><h3 class="article-master__title">Юлия Устюжанина</h3><div class="article-master__info"><div class="article-master__picture"><img src="assets/images/trener-1.png" alt=""></div><div class="article-master__block"><p class="article-master__text">Кандидат в мастера спорта. Призёр чемпионата России, многократная чемпионка Свердловской и Челябинской областей. Владеет ударами: абриколь, дуплет, массе, француз.<br><br>Более 8 лет в бильярдном спорте.<br>Стаж преподавания 2 года.<br><br>Стоимость занятия - <b>1000 ₽/час</b></p><button class="button button--small" data-fancybox="Sergey" data-src="#modalTraining">Подробнее</button></div></div></article></div></div></div><div class="swiper-control"><div class="swiper-button swiper-button-prev"><svg class="swiper-icon swiper-icon--reversed"><use href="assets/sprite/sprite.svg#icon-arrow-slim"></use></svg></div><div class="swiper-scrollbar"></div><div class="swiper-button swiper-button-next"><svg class="swiper-icon"><use href="assets/sprite/sprite.svg#icon-arrow-slim"></use></svg></div></div></div><p class="academy__text academy__text--center">Тренировки юных игроков</p><div class="academy__wrapper"><div class="academy__item"><picture class="academy__picture"><img src="assets/images/trener-1.png" alt=""></picture></div><div class="academy__item"><picture class="academy__picture"><img src="assets/images/trener-1.png" alt=""></picture></div><div class="academy__item"><picture class="academy__picture"><img src="assets/images/trener-1.png" alt=""></picture></div></div></div></div></section></main><footer class="footer footer--invert"><div class="container"><div class="footer__wrapper"><div class="footer__body"><div class="footer__info"><a href="#" class="footer__logo"><img src="assets/images/main-logo-dark.svg" alt=""></a><div class="footer__meta"><a href="#" class="link">Бронь столов</a> <a href="tel:+73433753218" class="link">+ 7(343)375-32-18</a></div><nav class="footer__nav"><a href="#" class="footer__link">О клубе</a> <a href="#" class="footer__link">Обучение</a> <a href="#" class="footer__link">Услуги и цены</a> <a href="#" class="footer__link">Мероприятия</a></nav></div><a href="#" class="link link--align-left">Регистрируйтесь в<br>программе лояльности</a></div><a href="#" class="footer__qr"><img src="assets/images/QR-Code.svg" alt=""></a></div><div class="footer__bottom"><div class="socials"><a href="#" class="socials__link"><svg><use href="assets/sprite/sprite.svg#icon-vk"></use></svg></a></div><div class="footer__line"></div><a href="#" class="development">Разработано <img src="assets/images/logo-partner-dark.svg" alt=""></a></div></div></footer><style>.temp {
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+</head>
+
+<body>
+<header class="header header--invert">
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="logo" href="/">
+        <img src="assets/images/logo-dark.svg" alt="">
+      </a>
+      <nav class="nav mob-hidden">
+        <a class="nav__item" href="/about.html">О клубе</a>
+        <a class="nav__item" href="/services.html">Услуги и цены</a>
+        <a class="nav__item" href="">Ресторан</a>
+        <a class="nav__item" href="/events.html">Мероприятия</a>
+        <a class="nav__item" href="/academy.html">Обучение</a>
+        <a class="nav__item" href="/contacts.html">Контакты</a>
+      </nav>
+      <div class="burger" data-burger>
+        <span class="burger__item"></span>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" data-menu-mobile>
+    <a class="logo" href="/">
+      <img src="assets/images/logo-dark.svg" alt="">
+    </a>
+    <nav class="nav">
+      <button class="nav__item nav__item--fancy" data-fancybox data-src="#modalRent">Забронировать стол</button>
+      <button class="nav__item nav__item--fancy" data-fancybox data-src="#modalTraining">Записаться на тренировку</button>
+      <a class="nav__item" href="/about.html">О клубе</a>
+      <a class="nav__item" href="/services.html">Услуги и цены</a>
+      <a class="nav__item" href="">Ресторан</a>
+      <a class="nav__item" href="/events.html">Мероприятия</a>
+      <a class="nav__item" href="/academy.html">Обучение</a>
+      <a class="nav__item" href="/contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+    <section class="section section--color--light section--bg--pattern--about">
+  <div class="container">
+    <div class="academy">
+      <div class="academy__header">
+        <h1 class="title title--color--dark">Уральская академия бильярда</h1>
+        <p class="academy__text mob-hidden">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+          стандартной "рыбой" для текстов на латинице с начала XVI века.
+        </p>
+        <p class="academy__text">Ваш персональный тренер</p>
+      </div>
+      <div class="slider slider--masters" data-slider data-desktop-only>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="article-master article-master--detail">
+                <h3 class="article-master__title">Юлия Устюжанина</h3>
+                <div class="article-master__info">
+                  <div class="article-master__picture">
+                    <img src="assets/images/trener-1.png" alt="">
+                  </div>
+                  <div class="article-master__block">
+                    <p class="article-master__text">
+                      Кандидат в мастера спорта. Призёр чемпионата России, многократная чемпионка Свердловской и
+                      Челябинской
+                      областей. Владеет ударами: абриколь, дуплет, массе, француз.<br>
+                      <br>
+                      Более 8 лет в бильярдном спорте.<br>
+                      Стаж преподавания 2 года.<br>
+                      <br>
+                      Стоимость занятия - <b>1000 ₽/час</b>
+                    </p>
+                    <button class="button button--small" data-fancybox="Julia" data-src="#modalTraining">Подробнее
+                    </button>
+                  </div>
+                </div>
+                <svg class="separator">
+                  <use xlink:href="/assets/sprite/sprite.svg#icon-cue-separator"></use>
+                </svg>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="article-master article-master--detail">
+                <h3 class="article-master__title">Юлия Устюжанина</h3>
+                <div class="article-master__info">
+                  <div class="article-master__picture">
+                    <img src="assets/images/trener-1.png" alt="">
+                  </div>
+                  <div class="article-master__block">
+                    <p class="article-master__text">
+                      Кандидат в мастера спорта. Призёр чемпионата России, многократная чемпионка Свердловской и
+                      Челябинской
+                      областей. Владеет ударами: абриколь, дуплет, массе, француз.<br>
+                      <br>
+                      Более 8 лет в бильярдном спорте.<br>
+                      Стаж преподавания 2 года.<br>
+                      <br>
+                      Стоимость занятия - <b>1000 ₽/час</b>
+                    </p>
+                    <button class="button button--small" data-fancybox="Sergey" data-src="#modalTraining">Подробнее
+                    </button>
+                  </div>
+                </div>
+                <svg class="separator separator--drl">
+                  <use xlink:href="/assets/sprite/sprite.svg#icon-cue-separator"></use>
+                </svg>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-control">
+          <div class="swiper-button swiper-button-prev">
+            <svg class="swiper-icon swiper-icon--reversed">
+              <use href="assets/sprite/sprite.svg#icon-arrow-slim"></use>
+            </svg>
+          </div>
+          <div class="swiper-button swiper-button-next">
+            <svg class="swiper-icon">
+              <use href="assets/sprite/sprite.svg#icon-arrow-slim"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="academy__text academy__text--center">Тренировки юных игроков</p>
+        <div class="slider" data-slider="custom">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="academy__picture">
+                  <img src="assets/images/trener-1.png" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="academy__picture">
+                  <img src="assets/images/trener-1.png" alt="">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="academy__picture">
+                  <img src="assets/images/trener-1.png" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer footer--invert">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__body">
+        <div class="footer__info">
+          <a href="#" class="footer__logo">
+            <img src="assets/images/main-logo-dark.svg" alt="">
+          </a>
+          <div class="footer__meta">
+            <a href="#" class="link">Бронь столов</a>
+            <a href="tel:+73433753218" class="link">+ 7(343)375-32-18</a>
+          </div>
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">О клубе</a>
+            <a href="#" class="footer__link">Обучение</a>
+            <a href="#" class="footer__link">Услуги и цены</a>
+            <a href="#" class="footer__link">Мероприятия</a>
+          </nav>
+        </div>
+        <a href="#" class="link link--align-left">Регистрируйтесь в<br>программе лояльности</a>
+      </div>
+      <a href="#" class="footer__qr">
+        <img src="assets/images/QR-Code.svg" alt="">
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <div class="socials">
+        <a href="#" class="socials__link">
+          <svg>
+            <use href="assets/sprite/sprite.svg#icon-vk"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__line"></div>
+      <a href="#" class="development">
+        Разработано
+        <img src="assets/images/logo-partner-dark.svg" alt="">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+.temp {
   display: flex;
+  flex-wrap: wrap;
   padding: 20px 0;
   gap: 20px;
   color: #000;
-}</style><section class="section"><div class="container"><div class="temp"><a href="index.html">Главная</a> <a href="about.html">О нас</a> <a href="services.html">Услуги и цены</a> <a href="events.html">Мероприятия</a> <a href="eventsDetail.html">Мероприятия деталка</a> <a href="academy.html">Академия</a> <a href="contacts.html">Контакты</a></div></div></section><div class="hidden"><div class="modal" id="modalRent"><h2 class="modal__title">Предварительная бронь</h2><p class="modal__text">Перезвоним Вам в течение 15 минут.</p><p class="modal__text">Заявка на предварительную бронь не является фактом бронирования.</p><form action="#" class="modal__form form" data-form><p class="form__text">Выберете стол</p><label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TABLE" value="RUSSIAN" required> <span>Русский</span></label> <label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TABLE" value="AMERICAN" required> <span>Американский</span></label> <label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TABLE" value="VIP" required> <span>VIP - зал</span></label><div class="form__block"><input type="date" class="input" placeholder="22-12-2023" name="DATE" required> <input type="time" class="input" placeholder="Время начала игры" name="PLAY_START_TIME" required></div><div class="form__block"><input class="input" placeholder="Ваше имя" name="NAME" required> <input type="tel" class="input" placeholder="Ваш телефон" name="PHONE" required></div><button class="button button--link button--brown" type="submit">Забронировать стол</button></form><button class="modal__button" data-fancybox-close><svg class="modal__icon"><use href="assets/sprite/sprite.svg#icon-close"></use></svg></button></div><div class="modal" id="modalTraining"><h2 class="modal__title">Запись на тренировку</h2><p class="modal__text">Перезвоним Вам в течение 15 минут.</p><form action="#" class="modal__form form" data-form><p class="form__text">Выберете тренировку</p><input type="hidden" name="TRAINER" value="0"> <label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="INDIVIDUAL" required> <span>Индивидуальная</span></label> <label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="PARTY" required> <span>Парная</span></label> <label class="form__item"><input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="KIDS" required> <span>Групповая для детей</span></label><div class="form__block"><input class="input" placeholder="Имя" name="NAME" required> <input type="tel" class="input" placeholder="Телефон" name="PHONE" required> <input type="email" class="input" placeholder="Почта" name="EMAIL" required></div><button class="button button--link button--brown" type="submit">Записаться</button></form><button class="modal__button" data-fancybox-close><svg class="modal__icon"><use href="assets/sprite/sprite.svg#icon-close"></use></svg></button></div></div><script defer="defer" src="js/bundle.js"></script></body></html>
+}
+</style>
+<section class="section">
+  <div class="container">
+    <div class="temp">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О нас</a>
+      <a href="services.html">Услуги и цены</a>
+      <a href="events.html">Мероприятия</a>
+      <a href="eventsDetail.html">Мероприятия деталка</a>
+      <a href="academy.html">Академия</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+  </div>
+</section>
+
+<div class="hidden">
+  <div class="modal" id="modalRent">
+    <h2 class="modal__title">Предварительная бронь</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <p class="modal__text">Заявка на предварительную бронь не является фактом бронирования.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Выберете стол</p>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="RUSSIAN" required>
+        <span>Русский</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="AMERICAN" required>
+        <span>Американский</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="VIP" required>
+        <span>VIP - зал</span>
+      </label>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="22-12-2023" name="DATE" required data-date-selection>
+        <input type="time" class="input" placeholder="Время начала игры" name="PLAY_START_TIME" required>
+      </div>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Ваше имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Ваш телефон" name="PHONE" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Забронировать стол</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal" id="modalTraining">
+    <h2 class="modal__title modal__title--main">Запись на тренировку</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Выберете тренировку</p>
+      <input type="hidden" name="TRAINER" value="0">
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="INDIVIDUAL" required>
+        <span>Индивидуальная</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="PARTY" required>
+        <span>Парная</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="GROUP" required>
+        <span>Групповая</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="CORPORATE" required>
+        <span>Корпоративная</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TRAINING_TYPE" value="KIDS" required>
+        <span>Детская</span>
+      </label>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Телефон" name="PHONE" required>
+        <input type="email" class="input" placeholder="Почта" name="EMAIL" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Забронировать стол</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal" id="modalRentBilliard">
+    <h2 class="modal__title">Аренда бильярдного стола</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <p class="modal__text">Заявка на предварительную бронь не является фактом бронирования.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Выберете стол</p>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="RUSSIAN" required>
+        <span>Русский</span>
+      </label>
+      <label class="form__item">
+        <input type="radio" class="checkbox" name="CHOOSE_TABLE" value="AMERICAN" required>
+        <span>Американский</span>
+      </label>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="22-12-2023" name="DATE" required data-date-selection>
+        <input type="time" class="input" placeholder="Время начала игры" name="PLAY_START_TIME" required>
+      </div>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Ваше имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Ваш телефон" name="PHONE" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Забронировать стол</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal" id="modalRentVip">
+    <h2 class="modal__title">Аренда  VIP-комнаты</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <p class="modal__text">Заявка на предварительную бронь не является фактом бронирования.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Выберете дату и вермя бронирования</p>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="22-12-2023" name="DATE" required data-date-selection>
+        <input type="time" class="input" placeholder="Время начала игры" name="PLAY_START_TIME" required>
+      </div>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Ваше имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Ваш телефон" name="PHONE" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Забронировать стол</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal" id="modalOrganisation">
+    <h2 class="modal__title">Организация мероприятий</h2>
+    <p class="modal__text">Перезвоним Вам в течение 15 минут.</p>
+    <form action="#" class="modal__form form" data-form>
+      <p class="form__text">Сообщите о своем мероприятии</p>
+      <div class="form__block">
+        <textarea name="MESSAGE" id="" class="input" rows="5" required placeholder="Ваше мероприятие..."></textarea>
+      </div>
+      <div class="form__block">
+        <input type="text" class="input" placeholder="Имя" name="NAME" required>
+        <input type="tel" class="input" placeholder="Телефон" name="PHONE" required>
+        <input type="email" class="input" placeholder="Почта" name="EMAIL" required>
+      </div>
+      <button class="button button--link button--brown" type="submit">Забронировать стол</button>
+    </form>
+    <button class="modal__button" data-fancybox-close>
+      <svg class="modal__icon">
+        <use href="assets/sprite/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script defer src="js/bundle.83a3.js"></script></body>
+</html>

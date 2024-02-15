@@ -7,4 +7,10 @@
   color: $camed;
   border-radius: 10px;
   background-color: $light-wood;
+  
+  @include r($desktop) {
+    padding: 8px 6px;
+    font-size: 14px;
+    line-height: 19px;
+  }
 }

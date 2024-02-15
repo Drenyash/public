@@ -1,10 +1,10 @@
 <header class="header header--invert">
   <div class="container">
     <div class="header__wrapper">
-      <nav class="nav">
-        <a class="nav__item" href="/">
-          <img src="assets/images/logo-dark.svg" alt="">
-        </a>
+      <a class="logo" href="/">
+        <img src="assets/images/logo-dark.svg" alt="">
+      </a>
+      <nav class="nav mob-hidden">
         <a class="nav__item" href="/about.html">О клубе</a>
         <a class="nav__item" href="/services.html">Услуги и цены</a>
         <a class="nav__item" href="">Ресторан</a>
@@ -12,6 +12,24 @@
         <a class="nav__item" href="/academy.html">Обучение</a>
         <a class="nav__item" href="/contacts.html">Контакты</a>
       </nav>
+      <div class="burger" data-burger>
+        <span class="burger__item"></span>
+      </div>
     </div>
+  </div>
+  <div class="mobile-menu" data-menu-mobile>
+    <a class="logo" href="/">
+      <img src="assets/images/logo-dark.svg" alt="">
+    </a>
+    <nav class="nav">
+      <button class="nav__item nav__item--fancy" data-fancybox data-src="#modalRent">Забронировать стол</button>
+      <button class="nav__item nav__item--fancy" data-fancybox data-src="#modalTraining">Записаться на тренировку</button>
+      <a class="nav__item" href="/about.html">О клубе</a>
+      <a class="nav__item" href="/services.html">Услуги и цены</a>
+      <a class="nav__item" href="">Ресторан</a>
+      <a class="nav__item" href="/events.html">Мероприятия</a>
+      <a class="nav__item" href="/academy.html">Обучение</a>
+      <a class="nav__item" href="/contacts.html">Контакты</a>
+    </nav>
   </div>
 </header>

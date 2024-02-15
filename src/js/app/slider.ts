@@ -1,66 +1,119 @@
 import Swiper from "swiper";
 import 'swiper/css';
-import {Mousewheel, Navigation, Scrollbar, Thumbs} from "swiper/modules";
+import {Navigation, Pagination, Thumbs} from "swiper/modules";
 
 class Slider {
-  element;
-  thumbs;
-  slider: Swiper;
-  constructor(element: Element, thumbs?: Element) {
-    this.element = element;
-    this.thumbs = thumbs;
-    this.slider = this.element.querySelector('.swiper')
-    this.init()
-  }
-  
-  init() {
-    this.initSlider()
-  }
-  
-  initSlider() {
-    if (this.element.getAttribute('data-slider') !== 'thumbs') {
-      this.initDefaultSlider()
-    } else {
-      this.initSliderWithThumbs()
+    element;
+    thumbs;
+    slider: Swiper;
+    desktop;
+    
+    constructor(element: Element, thumbs?: Element) {
+        this.element = element;
+        this.thumbs = thumbs;
+        this.slider = this.element.querySelector('.swiper')
+        this.desktop = window.matchMedia('(max-width: 744px)')
+        this.init()
     }
-  }
-  
-  initDefaultSlider() {
-    new Swiper(this.slider, {
-      modules: [Navigation, Scrollbar, Mousewheel],
-      slidesPerView: 1,
-      spaceBetween: 32,
-      mousewheel: true,
-      direction: 'vertical',
-      autoHeight: true,
-      navigation: {
-        nextEl: this.element.querySelector('.swiper-button-next'),
-        prevEl: this.element.querySelector('.swiper-button-prev'),
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })
-  }
-  
-  initSliderWithThumbs() {
-    const thumbsSlider = new Swiper(this.thumbs.querySelector('.swiper'), {
-      slidesPerView: 3,
-      spaceBetween: 32,
-    })
-    new Swiper(this.slider, {
-      modules: [Navigation, Thumbs],
-      slidesPerView: 1,
-      spaceBetween: 32,
-      navigation: {
-        nextEl: this.element.querySelector('.swiper-button-next'),
-        prevEl: this.element.querySelector('.swiper-button-prev'),
-      },
-      thumbs: {
-        swiper: thumbsSlider
-      }
-    })
-  }
+    
+    init() {
+        this.initSlider()
+    }
+    
+    initSlider() {
+        switch (this.element.getAttribute('data-slider')) {
+        case 'custom':
+            this.initCustomSlider();
+            break;
+        case 'master':
+            this.initMastersSlider();
+            break;
+        case 'thumbs':
+            this.initSliderWithThumbs()
+            break;
+        default:
+            this.initDefaultSlider()
+        }
+    }
+    
+    initDefaultSlider() {
+        const swiper = new Swiper(this.slider, {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: 1200,
+            navigation: {
+                nextEl: this.element.querySelector('.swiper-button-next'),
+                prevEl: this.element.querySelector('.swiper-button-prev'),
+            }
+        })
+        if (this.element.hasAttribute('data-desktop-only')) {
+            if (this.desktop.matches) {
+                swiper.destroy(true, true)
+            }
+        }
+    }
+    
+    initCustomSlider() {
+        new Swiper(this.slider, {
+            modules: [Pagination],
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            centeredSlides: true,
+            breakpoints: {
+                744: {
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                }
+            },
+            pagination: {
+                el: this.slider.querySelector('.swiper-pagination'),
+                clickable: true,
+            }
+        })
+    }
+    
+    initMastersSlider() {
+        new Swiper(this.slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            breakpoints: {
+                744: {
+                    slidesPerView: 2,
+                }
+            }
+        })
+    }
+    
+    initSliderWithThumbs() {
+        const thumbsSlider = new Swiper(this.thumbs.querySelector('.swiper'), {
+            slidesPerView: 2,
+            spaceBetween: 32,
+            breakpoints: {
+                1133: {
+                    slidesPerView: 3,
+                }
+            }
+        })
+        new Swiper(this.slider, {
+            modules: [Navigation, Thumbs],
+            slidesPerView: 'auto',
+            spaceBetween: 32,
+            centeredSlides: true,
+            navigation: {
+                nextEl: this.element.querySelector('.swiper-button-next'),
+                prevEl: this.element.querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                744: {
+                    slidesPerView: 1,
+                    centeredSlides: false,
+                }
+            },
+            thumbs: {
+                swiper: thumbsSlider
+            },
+        })
+    }
 }
 
 export default Slider

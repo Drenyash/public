@@ -1,10 +1,11 @@
 .masters {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: -133px;
-  margin-bottom: 100px;
+  max-width: 1424px;
+  margin: -133px auto 100px;
   padding: 60px 176px 66px;
   background-color: $green;
   background-image: url("assets/images/background-pattern-masters.png");
@@ -13,14 +14,40 @@
   border-radius: 24px;
   box-shadow: 0px -3px 5px 0px #4D907817, 0px 12px 13px 0px #4D90782B, 0px 4px 6px 0px #4D90781F, 0px -12px 30px 0px #4D90781F, 0px 54px 55px 0px #4D907840;
   
+  @include r($desktop) {
+    max-width: 800px;
+    margin-top: -60px;
+    padding: 30px 30px 40px;
+  }
+  
+  @include r($tablet) {
+    max-width: 640px;
+    padding: 30px 80px 40px;
+  }
+  
+  @include r($mobile) {
+    padding: 20px 40px;
+  }
+  
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @include r($desktop) {
+      align-items: stretch;
+      max-width: 592px;
+      gap: 32px;
+    }
   }
   
   &__title {
     margin-bottom: 20px;
+    
+    @include r($mobile) {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
   }
 }
