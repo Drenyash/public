@@ -2,6 +2,7 @@
   position: relative;
   padding: 34px 34px 63px;
   border-radius: 10px;
+  width: 100%;
   max-width: 592px;
   overflow: hidden;
   overflow-y: auto;
@@ -49,6 +50,7 @@
     right: 10px;
     cursor: pointer;
     transition: .2s linear;
+    z-index: 1;
 
     &:hover {
       opacity: .7;

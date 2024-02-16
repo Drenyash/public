@@ -9,3 +9,5 @@ import "./icon-telegram.svg";
 import "./icon-time.svg";
 import "./icon-close.svg";
 import "./icon-cue-separator.svg";
+import "./icon-cancel.svg";
+import "./icon-check.svg";

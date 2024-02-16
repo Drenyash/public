@@ -37,20 +37,48 @@ class Slider {
     }
     
     initDefaultSlider() {
-        const swiper = new Swiper(this.slider, {
+        let currentRotate = 0;
+        const swiperCue = this.element.querySelector('[data-slider-cue]') as HTMLElement;
+        let swiper = new Swiper(this.slider, {
             modules: [Navigation],
             slidesPerView: 1,
             spaceBetween: 1200,
             navigation: {
                 nextEl: this.element.querySelector('.swiper-button-next'),
                 prevEl: this.element.querySelector('.swiper-button-prev'),
+            },
+            on: {
+                slideNextTransitionStart() {
+                    currentRotate += 180
+                    swiperCue.style.rotate = `${currentRotate}deg`
+                },
+                slidePrevTransitionStart() {
+                    currentRotate -= 180
+                    swiperCue.style.rotate = `${currentRotate}deg`
+                }
             }
         })
         if (this.element.hasAttribute('data-desktop-only')) {
             if (this.desktop.matches) {
                 swiper.destroy(true, true)
+            } else {
+                swiper.init()
             }
         }
+        window.addEventListener('resize', () => {
+            if (this.element.hasAttribute('data-desktop-only')) {
+                if (this.desktop.matches) {
+                    if (swiper) {
+                        swiper.destroy(true, true)
+                        swiper = null;
+                    }
+                } else {
+                    if (!swiper) {
+                        this.initDefaultSlider()
+                    }
+                }
+            }
+        })
     }
     
     initCustomSlider() {

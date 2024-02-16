@@ -5,6 +5,7 @@
       background-color: $light-wood;
     }
   }
+  
   &--bg {
     background-size: cover;
     background-position: center;
@@ -18,7 +19,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
         display: flex;
         pointer-events: none;
         z-index: 0;
@@ -28,31 +29,49 @@
     &--pattern {
       &--lines {
         background-image: url("assets/images/background-pattern.png"), url("assets/images/background-circles.png");
-        background-size: auto, auto;
+        background-size: auto, 1000px;
         background-position: center, bottom 160px right -60%;
+        
+        @include r($desktop) {
+          background-size: auto, 500px;
+          background-position: center, bottom right -25%;
+        }
+        @include r($tablet) {
+          background-size: auto, 500px;
+          background-position: center, bottom -7% right -250px;
+        }
+        @include r($mobile) {
+          background-size: auto, 200px;
+          background-position: center, bottom right -100px;
+        }
       }
+      
       &--gallery {
         background-image: url("assets/images/background-pattern-gallery.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
       }
+      
       &--about {
         background-image: url("assets/images/background-circles.png"), url("assets/images/background-circles-rotated.png");
         background-size: 40%, 40%;
         background-position: left -35% bottom, top 15% right -42%;
         background-repeat: no-repeat;
       }
+      
       &--services {
         background-image: url("assets/images/background-pattern-services.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
+      
       &--events {
         background-image: url("assets/images/background-pattern-events.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
+      
       &--contacts {
         background-image: url("assets/images/background-pattern-contacts.png");
         background-size: cover;

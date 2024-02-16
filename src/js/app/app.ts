@@ -6,6 +6,8 @@ import Tabs from "./tabs";
 import DatePicker from "./datePicker";
 import InputMask from "./inputMask";
 import Burger from "./burger";
+import LoadMore from "./loadMore";
+import loadMore from "./loadMore";
 
 class App {
     constructor() {
@@ -21,6 +23,7 @@ class App {
         this.createDatePicker()
         this.createInputMask()
         this.createBurger()
+        this.createLoadMore()
     };
     
     createSlider() {
@@ -73,6 +76,14 @@ class App {
         const burger = document.querySelector('[data-burger]')
         if (!burger) return;
         new Burger(burger)
+    }
+    
+    createLoadMore() {
+        const loadMoreBtn = document.querySelector('[data-load-more]')
+        const container = document.querySelector('[data-container]')
+        
+        if (!loadMoreBtn || !container) return;
+        new LoadMore(loadMoreBtn, container);
     }
 }
 

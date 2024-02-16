@@ -102,6 +102,9 @@
         @include r($desktop) {
           gap: 15px;
         }
+        @include r($tablet) {
+          max-height: 70px;
+        }
         @include r($mobile) {
           display: none;
         }
@@ -151,7 +154,7 @@
     }
     
     .swiper-slide {
-      @include rmin($tablet) {
+      @include rmin($desktop) {
         width: auto !important;
       }
     }
@@ -265,5 +268,32 @@
       opacity: .6;
       pointer-events: none;
     }
+  }
+}
+
+.swiper-cue {
+  transition: .4s ease-in-out;
+  pointer-events: none;
+  margin-bottom: 56px;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  @include r($desktop) {
+    height: 246px;
+    width: 4px;
+    margin-bottom: 37px;
+  }
+  
+  @include r($tablet) {
+    margin-bottom: -10px;
+    height: 152px;
+    width: 4px;
+    transform: rotate(90deg);
   }
 }

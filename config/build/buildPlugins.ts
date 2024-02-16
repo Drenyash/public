@@ -11,7 +11,7 @@ export function buildPlugins({
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash:4].css",
+      filename: "css/[name].css",
     }),
     new webpack.ProgressPlugin(),
     // @ts-ignore
