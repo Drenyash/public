@@ -14,7 +14,7 @@
   @include r($mobile) {
     padding-top: 60px;
   }
-
+  
   &__wrapper {
     display: grid;
     grid-template-columns: 474px 1fr;
@@ -26,7 +26,7 @@
       flex-direction: column
     }
   }
-
+  
   &__map {
     display: flex;
     width: 100%;
@@ -38,7 +38,7 @@
     @include r($mobile) {
       height: 130px;
     }
-
+    
     iframe {
       display: flex;
       width: 100%;
@@ -46,7 +46,7 @@
       border: none;
     }
   }
-
+  
   &__info {
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@
       gap: 20px;
     }
   }
-
+  
   &__address {
     font-size: 32px;
     font-weight: 500;
@@ -79,7 +79,7 @@
       line-height: 22px;
     }
   }
-
+  
   &__text,
   &__item {
     font-size: 32px;
@@ -96,24 +96,26 @@
       line-height: 19px;
     }
   }
-
+  
   &__item {
     display: flex;
     align-items: center;
     gap: 5px;
-
-    svg {
+    
+    &::before {
+      content: '';
       display: flex;
       width: 32px;
       height: 32px;
-      
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8yMzBfMTMwMSkiPg0KPHBhdGggZD0iTTE1Ljk5NDYgMi42NjY3NUM4LjYyNzk3IDIuNjY2NzUgMi42Njc5NyA4LjYzMzQxIDIuNjY3OTcgMTYuMDAwMUMyLjY2Nzk3IDIzLjM2NjcgOC42Mjc5NyAyOS4zMzM0IDE1Ljk5NDYgMjkuMzMzNEMyMy4zNjEzIDI5LjMzMzQgMjkuMzM0NiAyMy4zNjY3IDI5LjMzNDYgMTYuMDAwMUMyOS4zMzQ2IDguNjMzNDEgMjMuMzYxMyAyLjY2Njc1IDE1Ljk5NDYgMi42NjY3NVpNMTYuMDAxMyAyNi42NjY3QzEwLjEwOCAyNi42NjY3IDUuMzM0NjQgMjEuODkzNCA1LjMzNDY0IDE2LjAwMDFDNS4zMzQ2NCAxMC4xMDY3IDEwLjEwOCA1LjMzMzQxIDE2LjAwMTMgNS4zMzM0MUMyMS44OTQ2IDUuMzMzNDEgMjYuNjY4IDEwLjEwNjcgMjYuNjY4IDE2LjAwMDFDMjYuNjY4IDIxLjg5MzQgMjEuODk0NiAyNi42NjY3IDE2LjAwMTMgMjYuNjY2N1oiIGZpbGw9IiMwOTFFMDUiLz4NCjxwYXRoIGQ9Ik0xNi42NjggOS4zMzMyNUgxNC42NjhWMTcuMzMzM0wyMS42NjEzIDIxLjUzMzNMMjIuNjY4IDE5Ljg5MzNMMTYuNjY4IDE2LjMzMzNWOS4zMzMyNVoiIGZpbGw9IiMwOTFFMDUiLz4NCjwvZz4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJjbGlwMF8yMzBfMTMwMSI+DQo8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IndoaXRlIi8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPC9zdmc+DQo=);
+      background-size: contain;
       @include r($mobile) {
         width: 14px;
         height: 14px;
       }
     }
   }
-
+  
   &__meta {
     display: flex;
     flex-direction: column;
@@ -128,7 +130,7 @@
       gap: 10px;
     }
   }
-
+  
   &__link {
     font-size: 32px;
     font-weight: 500;
@@ -145,14 +147,14 @@
       line-height: 22px;
     }
   }
-
+  
   &__socials {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 44px;
   }
-
+  
   &__social svg {
     display: flex;
     width: 60px;

@@ -1,5 +1,7 @@
 .checkbox {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -10,7 +12,21 @@
     width: 24px;
     height: 24px;
   }
+  &::before {
+    content: '';
+    display: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    background-color: $camed;
+    @include r($desktop) {
+      width: 10px;
+      height: 10px;
+    }
+  }
   &:checked {
-    border-color: $camed;
+    &::before {
+      display: flex;
+    }
   }
 }
