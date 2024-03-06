@@ -152,12 +152,6 @@
     .swiper-wrapper {
       justify-content: space-between;
     }
-    
-    .swiper-slide {
-      @include rmin($desktop) {
-        width: auto !important;
-      }
-    }
   }
   
   &--thumbs {

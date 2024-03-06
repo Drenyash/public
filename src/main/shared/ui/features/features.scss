@@ -114,7 +114,7 @@
         top: -20%;
       }
       @include r($mobile) {
-        right: -22%;
+        right: -60px;
         top: 62px;
       }
     }
@@ -127,7 +127,7 @@
     
     @include r($mobile) {
       width: 124px;
-      left: -22%;
+      left: -60px;
       bottom: 0;
     }
   }

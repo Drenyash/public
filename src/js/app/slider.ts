@@ -105,6 +105,9 @@ class Slider {
             slidesPerView: 'auto',
             spaceBetween: 30,
             breakpoints: {
+                1300: {
+                    slidesPerView: 2,
+                },
                 744: {
                     slidesPerView: 2,
                 }

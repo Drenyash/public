@@ -1,6 +1,7 @@
 .article-master {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: auto;
   height: auto;
   
@@ -199,6 +200,7 @@
     left: 0;
     bottom: 0;
     display: flex;
+    width: 100%;
     padding: 10px 10px 16px;
     background-color: $light-wood;
     border-radius: 0 0 24px 24px;

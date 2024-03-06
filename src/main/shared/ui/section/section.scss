@@ -28,7 +28,6 @@
     
     &--pattern {
       &--lines {
-        background-image: url("assets/images/background-pattern.png"), url("assets/images/background-circles.png");
         background-size: auto, 1000px;
         background-position: center, bottom 160px right -60%;
         
@@ -47,33 +46,28 @@
       }
       
       &--gallery {
-        background-image: url("assets/images/background-pattern-gallery.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
       }
       
       &--about {
-        background-image: url("assets/images/background-circles.png"), url("assets/images/background-circles-rotated.png");
         background-size: 40%, 40%;
         background-position: left -35% bottom, top 15% right -42%;
         background-repeat: no-repeat;
       }
       
       &--services {
-        background-image: url("assets/images/background-pattern-services.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
       
       &--events {
-        background-image: url("assets/images/background-pattern-events.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
       
       &--contacts {
-        background-image: url("assets/images/background-pattern-contacts.png");
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -81,12 +75,12 @@
     
     &--intro {
       position: relative;
-      background-image: url("assets/images/header-bg.jpg");
     }
     
     &--info {
       position: relative;
-      background-image: url("assets/images/bg-1.jpg");
+      background-size: cover;
+      background-position: center;
       @include r($mobile) {
         &::after {
           content: '';
@@ -102,9 +96,10 @@
     }
     
     &--tournaments {
-      background-image: url("assets/images/bg-2.jpg");
+      background-size: cover;
+      background-position: center;
       @include r($mobile) {
-        background: $dark-green
+        background: $dark-green !important;
       }
     }
   }

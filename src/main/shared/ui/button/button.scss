@@ -15,7 +15,7 @@
     font-size: 14px;
     line-height: 19px;
   }
-
+  
   &--circle {
     padding: 18px 20px;
     border: 1px solid $light-wood;
@@ -40,6 +40,7 @@
   &--accent {
     background-color: $green;
     border: none;
+    
     &:hover {
       background-color: $light-wood;
       color: $camed;
@@ -54,23 +55,28 @@
   &--animate {
     position: relative;
     overflow: hidden;
+    
     span {
       position: relative;
       z-index: 3;
     }
+    
     &--balls {
       &:hover {
         padding-right: 60px;
         @include r($desktop) {
           padding-right: 35px;
         }
+        
         &::before {
           animation: ballMove .5s ease-in-out;
         }
+        
         &::after {
           right: 4px;
         }
       }
+      
       &::before {
         content: '';
         position: absolute;
@@ -89,6 +95,7 @@
           height: 26px;
         }
       }
+      
       &::after {
         content: '';
         position: absolute;
@@ -119,6 +126,17 @@
     
     @include r($desktop) {
       padding: 8px;
+    }
+  }
+  
+  &--transparent {
+    border-radius: 8px;
+    padding: 14px 20px;
+    border: 1px solid $camed;
+    
+    &:hover {
+      background-color: $camed;
+      color: $light;
     }
   }
 }

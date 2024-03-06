@@ -51,6 +51,7 @@
     @include r($mobile) {
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 30px 10px;
       height: 100%;
       font-size: 14px;

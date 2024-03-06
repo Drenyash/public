@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+<body>
+<%= htmlWebpackPlugin.options.widgets.headerInvert %>
+<main class="main">
+  <section class="section section--color--light section--bg" style="background-image: url('./assets/images/background-pattern-error.png')">
+    <div class="container">
+      <div class="error-page">
+        <h1 class="title">Страница не найдена</h1>
+        <picture class="error-page__picture">
+          <img src="./assets/images/404.svg" alt="">
+        </picture>
+        <a href="/" class="error-page__button button button--transparent">Вернуться на главную</a>
+      </div>
+    </div>
+  </section>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footerInvert %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>
